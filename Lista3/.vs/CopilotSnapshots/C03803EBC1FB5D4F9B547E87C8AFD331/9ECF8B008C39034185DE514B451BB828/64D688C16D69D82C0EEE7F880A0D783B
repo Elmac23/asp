@@ -1,0 +1,20 @@
+﻿using System;
+using System.Web.UI;
+
+namespace Lista3
+{
+    public partial class Target : AuthPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Context.Items["Items.Counter"] != null)
+            {
+                lblReceived.Text = Context.Items["Items.Counter"].ToString();
+            }
+            else
+            {
+                lblReceived.Text = "Brak danych w Context.Items dla klucza 'Items.Counter'.";
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <AppName>Lista4FromXml</AppName>
+  <MySettings>
+    <OptionA>FromXml</OptionA>
+    <Nested>
+      <Value>XmlNested</Value>
+    </Nested>
+  </MySettings>
+  <XmlOverride>from-xml</XmlOverride>
+</settings>

@@ -1,0 +1,18 @@
+﻿using System;
+using System.Web.UI;
+
+namespace Lista3
+{
+    public partial class DataDemo : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnUseData_Click(object sender, EventArgs e)
+        {
+            var ctx = DataContextManager.Current;
+            lblInfo.Text = "Użyto DataContext o Id = " + ctx.QueryInfo();
+        }
+    }
+}

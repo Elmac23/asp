@@ -1,0 +1,18 @@
+using System;
+using System.Web.UI;
+
+namespace Lista3
+{
+    public partial class DataDemo : AuthPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnUseData_Click(object sender, EventArgs e)
+        {
+            var ctx = DataContextManager.Current;
+            lblInfo.Text = "U¿yto DataContext o Id = " + ctx.QueryInfo();
+        }
+    }
+}

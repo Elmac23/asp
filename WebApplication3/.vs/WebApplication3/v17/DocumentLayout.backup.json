@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\webapplication3\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\webapplication3\\customhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:customhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\webapplication3\\start.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\start.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:start.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\start.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:start.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\webapplication3\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\customhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|solutionrelative:customhttphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB50A78D-CBB9-43D8-AC4B-4793EF3C2439}|WebApplication3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\print.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CustomHttpHandler.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\CustomHttpHandler.cs",
               "RelativeDocumentMoniker": "CustomHttpHandler.cs",
@@ -63,24 +63,24 @@
               "RelativeToolTip": "CustomHttpHandler.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T10:03:53.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T10:03:53.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "start.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\start.aspx.cs",
               "RelativeDocumentMoniker": "start.aspx.cs",
               "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\start.aspx.cs",
               "RelativeToolTip": "start.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T19:53:52.35Z"
+              "WhenOpened": "2025-10-15T19:53:52.35Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "start.aspx",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\WebApplication3\\start.aspx",
               "RelativeDocumentMoniker": "start.aspx",

@@ -1,0 +1,91 @@
+﻿using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Lista4
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+            var app = builder.Build();
+
+            // Middleware to catch ambiguous-match-like exceptions and return a friendly message.
+            // In a real scenario you can implement a custom endpoint selector/policy to choose
+            // which endpoint should win. Here we demonstrate catching the failure during routing.
+            app.Use(async (context, next) =>
+            {
+                try
+                {
+                    await next();
+                }
+                catch (Exception ex)
+                {
+                    // The routing system may throw an AmbiguousMatchException when multiple endpoints match.
+                    // We don't want the server to crash; return a helpful text response instead.
+                    if (ex.GetType().Name == "AmbiguousMatchException")
+                    {
+                        context.Response.StatusCode = 500;
+                        await context.Response.WriteAsync($"AmbiguousMatchException caught: {ex.Message}");
+                        return;
+                    }
+
+                    throw;
+                }
+            });
+
+            // 1) Route with a parameter
+            app.MapGet("/param/{value}", (string value) =>
+                Results.Ok(new { route = "/param/{value}", value })
+            );
+
+            // 2) Route with a type constraint (int)
+            app.MapGet("/type/{id:int}", (int id) =>
+                Results.Ok(new { route = "/type/{id:int}", id })
+            );
+
+            // 3) Route with a length constraint (maxlength)
+            // Note: maxlength constraint enforces maximum length of the segment
+            app.MapGet("/length/{code:maxlength(3)}", (string code) =>
+                Results.Ok(new { route = "/length/{code:maxlength(3)}", code })
+            );
+
+            // 4) Required and optional parameters
+            // Required (missing value will result in 404)
+            app.MapGet("/required/{name}", (string name) =>
+                Results.Ok(new { route = "/required/{name}", name })
+            );
+
+            // Optional parameter (note the '?')
+            app.MapGet("/optional/{name?}", (string? name) =>
+                Results.Ok(new { route = "/optional/{name?}", name })
+            );
+
+            // 5) Route described by a regular expression
+            // Example regex: three uppercase letters followed by two digits, e.g. ABC12
+            // Escape '{' and '}' inside the regex quantifiers so the route parser treats them as literals
+            app.MapGet("/regex/{code:regex(^[A-Z]{{3}}\\d{{2}}$)}", (string code) =>
+                Results.Ok(new { route = "/regex/{code:regex(^[A-Z]{{3}}\\d{{2}}$)}", code })
+            );
+
+            // Overlapping routes that can cause AmbiguousMatchException when a numeric value is used.
+            // For example, requesting '/overlap/123' matches both '/overlap/{x}' and '/overlap/{x:int}'.
+            app.MapGet("/overlap/{x}", (string x) =>
+                Results.Ok(new { route = "/overlap/{x}", x, handler = "string" })
+            ).WithName("OverlapGeneric");
+
+            app.MapGet("/overlap/{x:int}", (int x) =>
+                Results.Ok(new { route = "/overlap/{x:int}", x, handler = "int" })
+            ).WithName("OverlapInt");
+
+            // A simple root and health endpoint
+            app.MapGet("/", () => "Hello World!");
+            app.MapGet("/health", () => Results.Ok(new { status = "Healthy" }));
+
+            app.Run();
+        }
+    }
+}

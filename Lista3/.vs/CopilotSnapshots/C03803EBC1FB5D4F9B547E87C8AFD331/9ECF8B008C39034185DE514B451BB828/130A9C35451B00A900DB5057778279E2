@@ -1,0 +1,57 @@
+﻿using System;
+using System.IO;
+using System.Text;
+using System.Web.UI;
+
+namespace Lista3
+{
+    public partial class Upload : AuthPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            if (!fileUpload.HasFile)
+            {
+                lblMessage.Text = "Wybierz plik przed wysłaniem.";
+                return;
+            }
+
+            var posted = fileUpload.PostedFile;
+            string originalName = Path.GetFileName(posted.FileName);
+            byte[] data;
+            using (var ms = new MemoryStream())
+            {
+                posted.InputStream.CopyTo(ms);
+                data = ms.ToArray();
+            }
+
+            long size = data.Length;
+            int checksum = 0;
+            for (int i = 0; i < data.Length; i++) checksum = (checksum + data[i]) & 0xFFFF;
+
+            // Build XML dynamically
+            var sb = new StringBuilder();
+            sb.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+            sb.AppendLine("<opis>");
+            sb.AppendLine("  <nazwa>" + System.Web.HttpUtility.HtmlEncode(originalName) + "</nazwa>");
+            sb.AppendLine("  <rozmiar>" + size + "</rozmiar>");
+            sb.AppendLine("  <sygnatura>" + checksum.ToString("X4") + "</sygnatura>");
+            sb.AppendLine("</opis>");
+
+            var xmlBytes = Encoding.UTF8.GetBytes(sb.ToString());
+
+            // Return as downloadable attachment without saving to disk
+            Response.Clear();
+            Response.ContentType = "application/xml";
+            // Content-Disposition: attachment; filename="..."; filename*=utf-8''...
+            string fileName = originalName + ".opis.xml";
+            string header = "attachment; filename=\"" + fileName + "\"; filename*=utf-8''" + Uri.EscapeDataString(fileName);
+            Response.AddHeader("Content-Disposition", header);
+            Response.OutputStream.Write(xmlBytes, 0, xmlBytes.Length);
+            Response.End();
+        }
+    }
+}
