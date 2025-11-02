@@ -32,7 +32,7 @@ namespace Lista3
             int checksum = 0;
             for (int i = 0; i < data.Length; i++) checksum = (checksum + data[i]) & 0xFFFF;
 
-            // Build XML dynamically
+            // XML
             var sb = new StringBuilder();
             sb.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
             sb.AppendLine("<opis>");
@@ -43,10 +43,8 @@ namespace Lista3
 
             var xmlBytes = Encoding.UTF8.GetBytes(sb.ToString());
 
-            // Return as downloadable attachment without saving to disk
             Response.Clear();
             Response.ContentType = "application/xml";
-            // Content-Disposition: attachment; filename="..."; filename*=utf-8''...
             string fileName = originalName + ".opis.xml";
             string header = "attachment; filename=\"" + fileName + "\"; filename*=utf-8''" + Uri.EscapeDataString(fileName);
             Response.AddHeader("Content-Disposition", header);

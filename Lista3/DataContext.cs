@@ -41,7 +41,6 @@ namespace Lista3
             }
         }
 
-        // Optional helper to dispose current context (also used by Global.asax)
         public static void DisposeCurrent()
         {
             var ctx = HttpContext.Current;

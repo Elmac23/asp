@@ -23,7 +23,6 @@
   });
 
   document.getElementById('getButton').addEventListener('click', function(){
-    // zbuduj querystring (możesz również pobrać wartości z formularza)
     document.location.href = 'Target.aspx?p1=v1&p2=v2';
   });
 </script>

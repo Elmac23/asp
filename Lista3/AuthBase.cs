@@ -17,12 +17,9 @@ namespace Lista3
         {
             var ctx = HttpContext.Current;
             if (ctx == null) return;
-
-            // Allow access to login page and static resources
             var appRelative = ctx.Request.AppRelativeCurrentExecutionFilePath ?? string.Empty;
             if (string.Equals(appRelative, "~/Login.aspx", StringComparison.OrdinalIgnoreCase)) return;
 
-            // If session contains user info, allow; otherwise redirect to login with returnUrl
             if (ctx.Session != null && ctx.Session["User"] != null) return;
 
             string returnUrl = ctx.Request.RawUrl ?? "~/";

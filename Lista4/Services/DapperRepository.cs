@@ -4,7 +4,6 @@ using Lista4.Models;
 
 namespace Lista4.Services
 {
-    // A simple in-memory implementation that simulates a repo; in real apps use Dapper with IDbConnection
     public class DapperRepository : IDapperRepository
     {
         private readonly List<Person> _data = new();
@@ -44,7 +43,6 @@ namespace Lista4.Services
         public void Dispose()
         {
             if (_disposed) return;
-            // free resources here
             _disposed = true;
         }
     }

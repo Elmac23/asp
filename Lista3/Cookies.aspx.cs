@@ -72,7 +72,6 @@ namespace Lista3
 
         protected void btnDeleteCookie_Click(object sender, EventArgs e)
         {
-            // Aby usunąć cookie po stronie klienta, nadpisujemy cookie z datą przeszłą
             if (Request.Cookies[TestCookieName] != null)
             {
                 var del = new HttpCookie(TestCookieName)
@@ -91,21 +90,16 @@ namespace Lista3
 
         protected void btnServerTest_Click(object sender, EventArgs e)
         {
-            // Wiarygodny test: ustaw cookie i przekieruj na tę samą stronę z paramem serverTest=1.
-            // Po przekierowaniu sprawdzamy Request.Cookies[ServerTestCookieName].
             var testCookie = new HttpCookie(ServerTestCookieName)
             {
                 Value = "1",
-                // Nie ustawiamy Expires -> cookie sesyjne; pokazuje to działanie w bieżącej sesji przeglądarki
                 HttpOnly = true
             };
             Response.Cookies.Add(testCookie);
 
-            // Przekierowanie na tę samą stronę z parametrem wskazującym drugą fazę testu
             string current = Request.Url.AbsolutePath;
             string qs = "?serverTest=1";
             Response.Redirect(current + qs, false);
-            // Response.End nie jest konieczny jeśli false; kończy się metoda.
         }
     }
 }

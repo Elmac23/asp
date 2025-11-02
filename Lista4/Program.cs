@@ -30,20 +30,16 @@ namespace Lista4
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add additional configuration files
             builder.Configuration
                 .AddJsonFile("appsettings.custom.json", optional: true, reloadOnChange: true)
                 .AddXmlFile("appsettings.custom.xml", optional: true, reloadOnChange: true);
 
-            // Register repository as scoped so it's disposed at the end of the request scope
             builder.Services.AddScoped<IDapperRepository, DapperRepository>();
 
-            // Bind configuration section to IOptions
             builder.Services.Configure<MySettings>(builder.Configuration.GetSection("MySettings"));
 
             var app = builder.Build();
 
-            // Middleware to catch ambiguous-match-like exceptions and return a friendly message.
             app.Use(async (context, next) =>
             {
                 try
@@ -63,22 +59,18 @@ namespace Lista4
                 }
             });
 
-            // 1) Route with a parameter
             app.MapGet("/param/{value}", (string value) =>
                 Results.Ok(new { route = "/param/{value}", value })
             );
 
-            // 2) Route with a type constraint (int)
             app.MapGet("/type/{id:int}", (int id) =>
                 Results.Ok(new { route = "/type/{id:int}", id })
             );
 
-            // 3) Route with a length constraint (maxlength)
             app.MapGet("/length/{code:maxlength(3)}", (string code) =>
                 Results.Ok(new { route = "/length/{code:maxlength(3)}", code })
             );
 
-            // 4) Required and optional parameters
             app.MapGet("/required/{name}", (string name) =>
                 Results.Ok(new { route = "/required/{name}", name })
             );
@@ -87,13 +79,11 @@ namespace Lista4
                 Results.Ok(new { route = "/optional/{name?}", name })
             );
 
-            // 5) Route described by a regular expression
-            // Escape '{' and '}' inside the regex quantifiers so the route parser treats them as literals
+
             app.MapGet("/regex/{code:regex(^[A-Z]{{3}}\\d{{2}}$)}", (string code) =>
                 Results.Ok(new { route = "/regex/{code:regex(^[A-Z]{{3}}\\d{{2}}$)}", code })
             );
 
-            // Overlapping routes
             app.MapGet("/overlap/{x}", (string x) =>
                 Results.Ok(new { route = "/overlap/{x}", x, handler = "string" })
             ).WithName("OverlapGeneric");
@@ -102,14 +92,12 @@ namespace Lista4
                 Results.Ok(new { route = "/overlap/{x:int}", x, handler = "int" })
             ).WithName("OverlapInt");
 
-            // A root endpoint demonstrating DI of IDapperRepository (scoped, disposed after request)
             app.MapGet("/", (IDapperRepository repo) =>
             {
                 var all = repo.GetAll();
                 return Results.Ok(all);
             });
 
-            // Additional repo endpoints: get by id and add
             app.MapGet("/repo/{id:int}", (int id, IDapperRepository repo) =>
             {
                 var p = repo.GetById(id);
@@ -127,11 +115,8 @@ namespace Lista4
                 return Results.Created($"/repo/{person.Id}", person);
             });
 
-            // Health endpoint
             app.MapGet("/health", () => Results.Ok(new { status = "Healthy" }));
 
-            // --- Minimal form example ---
-            // GET /form - show HTML form
             app.MapGet("/form", (HttpContext ctx) =>
             {
                 var error = ctx.Request.Query["error"].ToString();
@@ -160,7 +145,6 @@ namespace Lista4
                 return Results.Content(html, "text/html");
             });
 
-            // POST /submit - validate and redirect or return form with errors
             app.MapPost("/submit", async (HttpContext ctx) =>
             {
                 var form = await ctx.Request.ReadFormAsync();
@@ -173,18 +157,15 @@ namespace Lista4
 
                 if (errors.Count > 0)
                 {
-                    // Return the form populated with submitted values and an error message
                     var errorMsg = string.Join(" ", errors);
                     var query = $"?error={Uri.EscapeDataString(errorMsg)}&name={Uri.EscapeDataString(name)}&age={Uri.EscapeDataString(ageStr)}";
                     return Results.Redirect($"/form{query}");
                 }
 
-                // On success, redirect to /print with parameters in query string
                 var qs = $"?name={Uri.EscapeDataString(name)}&age={age}";
                 return Results.Redirect($"/print{qs}");
             });
 
-            // GET /print - display submitted values (from query string)
             app.MapGet("/print", (HttpContext ctx) =>
             {
                 var q = ctx.Request.Query;
@@ -208,24 +189,20 @@ namespace Lista4
                 return Results.Content(html, "text/html");
             });
 
-            // Endpoint showing IConfiguration indexer
             app.MapGet("/config/indexer", (IConfiguration config) =>
             {
-                // top-level key from appsettings or additional files
-                var appName = config["AppName"]; // example: AppName
+                var appName = config["AppName"];
                 return Results.Ok(new { AppName = appName });
             });
 
-            // Endpoint showing GetSection
             app.MapGet("/config/section", (IConfiguration config) =>
             {
                 var section = config.GetSection("MySettings");
-                var optionA = section["OptionA"]; // or section.GetValue<string>("OptionA")
+                var optionA = section["OptionA"];
                 var nestedValue = section.GetSection("Nested")["Value"];
                 return Results.Ok(new { OptionA = optionA, Nested = nestedValue });
             });
 
-            // Endpoint showing IOptions pattern
             app.MapGet("/config/options", (IOptions<MySettings> opts) =>
             {
                 var s = opts.Value;

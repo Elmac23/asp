@@ -11,7 +11,6 @@ namespace Lista3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Show current values
             object appVal = Application[AppCounterKey];
             lblApp.Text = "Application[App.Counter] = " + (appVal ?? "(null)");
 
@@ -21,14 +20,12 @@ namespace Lista3
             object itemsVal = Context.Items["Items.Counter"];
             lblItems.Text = "Items[Items.Counter] = " + (itemsVal ?? "(null)");
 
-            // Pseudo-singleton info if exists
             var ps = Application[PseudoSingletonKey] as PseudoSingleton;
             lblSingleton.Text = ps != null ? ("Pseudo-singleton.Value = " + ps.Value) : "(brak pseudo-singletona)";
         }
 
         protected void btnIncApp_Click(object sender, EventArgs e)
         {
-            // Example of synchronizing access to Application state
             lock (Application)
             {
                 int v = 0;
@@ -48,14 +45,12 @@ namespace Lista3
 
         protected void btnTransferWithItems_Click(object sender, EventArgs e)
         {
-            // Items is per-request: set a value and Server.Transfer to Target.aspx to read it within same request.
             Context.Items["Items.Counter"] = "przekazane przez Items: " + DateTime.Now.ToString("o");
             Server.Transfer("Target.aspx", false);
         }
 
         protected void btnCreateSingleton_Click(object sender, EventArgs e)
         {
-            // Pseudo-singleton stored in Application with double-check locking
             if (Application[PseudoSingletonKey] == null)
             {
                 lock (Application)
@@ -69,7 +64,6 @@ namespace Lista3
         }
     }
 
-    // Simple class used as pseudo-singleton stored in Application
     public class PseudoSingleton
     {
         public string Value { get; set; }

@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\appsettings.custom.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:appsettings.custom.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +11,20 @@
       "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\appsettings.custom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:appsettings.custom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\services\\idapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:services\\idapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\services\\dapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:services\\dapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\services\\idapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:services\\idapperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\appsettings.custom.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:appsettings.custom.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\appsettings.custom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|solutionrelative:appsettings.custom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E072CCDD-C948-444E-813D-AB163BC7B71A}|Lista4.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista4\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "appsettings.custom.xml",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\appsettings.custom.xml",
               "RelativeDocumentMoniker": "appsettings.custom.xml",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "appsettings.custom.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-10-31T21:55:50.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T21:55:50.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "appsettings.custom.json",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\appsettings.custom.json",
               "RelativeDocumentMoniker": "appsettings.custom.json",
@@ -68,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -93,19 +92,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DapperRepository.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\Services\\DapperRepository.cs",
               "RelativeDocumentMoniker": "Services\\DapperRepository.cs",
               "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\Services\\DapperRepository.cs",
               "RelativeToolTip": "Services\\DapperRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T21:42:50.766Z"
+              "WhenOpened": "2025-10-31T21:42:50.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "IDapperRepository.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\Services\\IDapperRepository.cs",
               "RelativeDocumentMoniker": "Services\\IDapperRepository.cs",
@@ -113,17 +113,18 @@
               "RelativeToolTip": "Services\\IDapperRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T21:42:45.292Z"
+              "WhenOpened": "2025-10-31T21:42:45.292Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista4\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwA8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T21:34:05.642Z",
               "EditorCaption": ""

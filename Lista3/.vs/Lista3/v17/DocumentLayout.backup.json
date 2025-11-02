@@ -3,99 +3,107 @@
   "WorkspaceRootPath": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\upload.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:upload.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\authbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:authbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\upload.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\upload.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:upload.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\containers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\datademo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\containers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\datademo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\datademo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\apidemo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\apidemo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\cookies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:cookies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\cookies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:cookies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\target.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:target.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\apidemo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\containers.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\target.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\target.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:target.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\target.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:target.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\target.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:target.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\upload.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:upload.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista3\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\datademo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\datademo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\cookies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:cookies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\cookies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:cookies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\containers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\containers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\authbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:authbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\apidemo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\apidemo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\apidemo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:apidemo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\datademo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:datademo.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\containers.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:containers.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\target.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:target.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\upload.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:upload.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC5EC7AF-2B08-4228-B191-E755141E1710}|Lista3.csproj|solutionrelative:login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -106,141 +114,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Login.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.designer.cs",
-              "RelativeDocumentMoniker": "Login.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.designer.cs",
-              "RelativeToolTip": "Login.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:31:35.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "Login.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.cs",
-              "RelativeToolTip": "Login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:31:31.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx",
-              "RelativeDocumentMoniker": "Login.aspx",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx",
-              "RelativeToolTip": "Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-27T21:31:25.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthBase.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\AuthBase.cs",
-              "RelativeDocumentMoniker": "AuthBase.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\AuthBase.cs",
-              "RelativeToolTip": "AuthBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:31:19.837Z",
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-02T14:20:00.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Upload.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.designer.cs",
-              "RelativeDocumentMoniker": "Upload.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.designer.cs",
-              "RelativeToolTip": "Upload.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:28:44.251Z",
+              "DocumentIndex": 6,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-02T14:19:36.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Upload.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.cs",
-              "RelativeDocumentMoniker": "Upload.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.cs",
-              "RelativeToolTip": "Upload.aspx.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAlwBAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:28:38.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Upload.aspx",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx",
-              "RelativeDocumentMoniker": "Upload.aspx",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx",
-              "RelativeToolTip": "Upload.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-27T21:28:25.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DataDemo.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.designer.cs",
-              "RelativeDocumentMoniker": "DataDemo.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.designer.cs",
-              "RelativeToolTip": "DataDemo.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:19:52.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Global.asax.cs",
-              "RelativeDocumentMoniker": "Global.asax.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Global.asax.cs",
-              "RelativeToolTip": "Global.asax.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:19:47.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DataDemo.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.cs",
-              "RelativeDocumentMoniker": "DataDemo.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.cs",
-              "RelativeToolTip": "DataDemo.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:19:39.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "DataDemo.aspx",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx",
               "RelativeDocumentMoniker": "DataDemo.aspx",
@@ -253,150 +157,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataContext.cs",
-              "RelativeDocumentMoniker": "DataContext.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataContext.cs",
-              "RelativeToolTip": "DataContext.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwCQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:19:31.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Containers.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.cs",
-              "RelativeDocumentMoniker": "Containers.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.cs",
-              "RelativeToolTip": "Containers.aspx.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAEwCIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T20:10:10.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Containers.aspx",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx",
-              "RelativeDocumentMoniker": "Containers.aspx",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx",
-              "RelativeToolTip": "Containers.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-27T20:09:54.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Target.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.cs",
-              "RelativeDocumentMoniker": "Target.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.cs",
-              "RelativeToolTip": "Target.aspx.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:26:03.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Target.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.designer.cs",
-              "RelativeDocumentMoniker": "Target.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.designer.cs",
-              "RelativeToolTip": "Target.aspx.designer.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:26:18.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApiDemo.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.cs",
-              "RelativeDocumentMoniker": "ApiDemo.aspx.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.cs",
-              "RelativeToolTip": "ApiDemo.aspx.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAlwAsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T20:07:49.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApiDemo.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.designer.cs",
-              "RelativeDocumentMoniker": "ApiDemo.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.designer.cs",
-              "RelativeToolTip": "ApiDemo.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T20:05:53.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ApiDemo.aspx",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx",
-              "RelativeDocumentMoniker": "ApiDemo.aspx",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx",
-              "RelativeToolTip": "ApiDemo.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-27T20:04:42.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Containers.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.designer.cs",
-              "RelativeDocumentMoniker": "Containers.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.designer.cs",
-              "RelativeToolTip": "Containers.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T20:10:16.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Cookies.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx.cs",
               "RelativeDocumentMoniker": "Cookies.aspx.cs",
               "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx.cs",
               "RelativeToolTip": "Cookies.aspx.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAqwB4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAqwGAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T19:58:06.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Cookies.aspx",
-              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx",
-              "RelativeDocumentMoniker": "Cookies.aspx",
-              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx",
-              "RelativeToolTip": "Cookies.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-27T19:54:53.124Z",
+              "DocumentIndex": 12,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataContext.cs",
+              "RelativeDocumentMoniker": "DataContext.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataContext.cs",
+              "RelativeToolTip": "DataContext.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:19:31.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 10,
+              "Title": "DataDemo.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.cs",
+              "RelativeDocumentMoniker": "DataDemo.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.cs",
+              "RelativeToolTip": "DataDemo.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:19:39.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:19:47.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx",
+              "RelativeDocumentMoniker": "Login.aspx",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx",
+              "RelativeToolTip": "Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-27T21:31:25.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Target.aspx",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx",
               "RelativeDocumentMoniker": "Target.aspx",
@@ -409,7 +235,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
+              "Title": "Target.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.cs",
+              "RelativeDocumentMoniker": "Target.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.cs",
+              "RelativeToolTip": "Target.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:26:03.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Upload.aspx",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx",
+              "RelativeDocumentMoniker": "Upload.aspx",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx",
+              "RelativeToolTip": "Upload.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-27T21:28:25.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "WebForm1.aspx",
               "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\WebForm1.aspx",
               "RelativeDocumentMoniker": "WebForm1.aspx",
@@ -419,6 +271,183 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-10-27T19:52:23.514Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cookies.aspx",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx",
+              "RelativeDocumentMoniker": "Cookies.aspx",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Cookies.aspx",
+              "RelativeToolTip": "Cookies.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-27T19:54:53.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Upload.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.cs",
+              "RelativeDocumentMoniker": "Upload.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.cs",
+              "RelativeToolTip": "Upload.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:28:38.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Containers.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.cs",
+              "RelativeDocumentMoniker": "Containers.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.cs",
+              "RelativeToolTip": "Containers.aspx.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAewA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:10:10.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Containers.aspx",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx",
+              "RelativeDocumentMoniker": "Containers.aspx",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx",
+              "RelativeToolTip": "Containers.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-27T20:09:54.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthBase.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\AuthBase.cs",
+              "RelativeDocumentMoniker": "AuthBase.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\AuthBase.cs",
+              "RelativeToolTip": "AuthBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:31:19.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Login.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.cs",
+              "RelativeToolTip": "Login.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:31:31.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApiDemo.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.designer.cs",
+              "RelativeDocumentMoniker": "ApiDemo.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.designer.cs",
+              "RelativeToolTip": "ApiDemo.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:05:53.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApiDemo.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.cs",
+              "RelativeDocumentMoniker": "ApiDemo.aspx.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx.cs",
+              "RelativeToolTip": "ApiDemo.aspx.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB0AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:07:49.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApiDemo.aspx",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx",
+              "RelativeDocumentMoniker": "ApiDemo.aspx",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\ApiDemo.aspx",
+              "RelativeToolTip": "ApiDemo.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-27T20:04:42.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DataDemo.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.designer.cs",
+              "RelativeDocumentMoniker": "DataDemo.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\DataDemo.aspx.designer.cs",
+              "RelativeToolTip": "DataDemo.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:19:52.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Upload.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Upload.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Upload.aspx.designer.cs",
+              "RelativeToolTip": "Upload.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:28:44.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Login.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Login.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Login.aspx.designer.cs",
+              "RelativeToolTip": "Login.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:31:35.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Target.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Target.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Target.aspx.designer.cs",
+              "RelativeToolTip": "Target.aspx.designer.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:26:18.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Containers.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Containers.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista3\\Containers.aspx.designer.cs",
+              "RelativeToolTip": "Containers.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T20:10:16.167Z"
             }
           ]
         }
