@@ -1,0 +1,55 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using System.Xml.Linq;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace Lista5Zad2.Controllers
+{
+    public class FileController : Controller
+    {
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upload(Microsoft.AspNetCore.Http.IFormFile file)
+        {
+            try
+            {
+                if (file == null || file.Length == 0)
+                {
+                    ModelState.AddModelError("file", "Wybierz plik do przesłania.");
+                    return View("Index");
+                }
+
+                // Copy to memory stream to ensure we can read length and content if needed
+                await using var ms = new MemoryStream();
+                await file.CopyToAsync(ms);
+                var size = ms.Length;
+                var name = file.FileName ?? string.Empty;
+
+                var doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                    new XElement("file",
+                        new XElement("name", name),
+                        new XElement("size", size)
+                    ));
+
+                var xmlString = doc.ToString();
+                var xmlBytes = Encoding.UTF8.GetBytes(xmlString);
+
+                return File(xmlBytes, "application/xml", "fileInfo.xml");
+            }
+            catch (System.Exception ex)
+            {
+                // Don't leak exception details to users; show friendly message
+                ModelState.AddModelError(string.Empty, "Wystąpił błąd podczas przesyłania pliku.");
+                // Optionally log the exception if a logger is available
+                return View("Index");
+            }
+        }
+    }
+}

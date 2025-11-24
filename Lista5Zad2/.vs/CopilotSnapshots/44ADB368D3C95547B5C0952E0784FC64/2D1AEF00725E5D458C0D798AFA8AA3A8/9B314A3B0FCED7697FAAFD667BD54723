@@ -1,0 +1,61 @@
+﻿@model Lista5Zad2.Models.StudentTasks
+
+@{
+    ViewData["Title"] = "Formularz zadań";
+}
+
+<h2 class="mb-4">Formularz zadań</h2>
+
+<form asp-action="Index" method="post" class="needs-validation" novalidate>
+    @Html.AntiForgeryToken()
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label asp-for="FirstName" class="form-label"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="LastName" class="form-label"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <h4>Punkty za 10 zadań</h4>
+    <div class="row">
+        @for (int i = 0; i < 10; i++)
+        {
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Zadanie @(@i + 1)</label>
+                <input type="number" name="Points[]" class="form-control" min="0" max="100" value="@(Model.Points != null && Model.Points.Length > i ? Model.Points[i].ToString() : "")" required />
+            </div>
+        }
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Reset</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Bootstrap client-side validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+}

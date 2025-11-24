@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "postgresql://postgres:zaq1@WSX@localhost:5432/mydb?schema=public"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

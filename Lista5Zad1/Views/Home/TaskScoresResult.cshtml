@@ -1,0 +1,32 @@
+@model Lista5Zad1.Models.TaskScoresViewModel
+
+@{
+    ViewBag.Title = "Task Scores Result";
+}
+
+<h2>Results for @Model.FirstName @Model.LastName</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Scores.Length; i++)
+        {
+            <tr>
+                <td>Task @(i + 1)</td>
+                <td>@Model.Scores[i]</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Total</th>
+            <th>@Model.Scores.Sum()</th>
+        </tr>
+       
+    </tfoot>
+</table>

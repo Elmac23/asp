@@ -1,0 +1,21 @@
+@model Lista6.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>Login</h2>
+<form asp-action="Login" method="post">
+    <div>
+        @Html.Login("UserName", "Password")
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+<h3>LoginFor example</h3>
+<form asp-action="Login" method="post">
+    <div>
+        @Html.LoginFor(m => m.UserName, m => m.Password)
+    </div>
+    <button type="submit">LoginFor</button>
+</form>
+
+<p>Note: Password uses text input for demo purposes as requested.</p>

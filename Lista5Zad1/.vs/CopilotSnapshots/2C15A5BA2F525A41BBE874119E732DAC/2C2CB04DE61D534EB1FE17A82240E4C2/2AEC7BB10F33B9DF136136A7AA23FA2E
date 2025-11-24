@@ -1,0 +1,44 @@
+﻿@model Lista5Zad1.Models.TaskScoresViewModel
+
+@{
+    ViewBag.Title = "Task Scores";
+}
+
+<h2>Enter scores for tasks 1-10</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "")
+
+    <div class="form-group">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Score (0-100)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < 10; i++)
+                {
+                    <tr>
+                        <td>Task @(i + 1)</td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Scores[i], new { @class = "form-control", type = "number", min = "0", max = "100" })
+                            @Html.ValidationMessageFor(m => m.Scores[i])
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success" style="margin-top:15px">@ViewBag.Message</div>
+}

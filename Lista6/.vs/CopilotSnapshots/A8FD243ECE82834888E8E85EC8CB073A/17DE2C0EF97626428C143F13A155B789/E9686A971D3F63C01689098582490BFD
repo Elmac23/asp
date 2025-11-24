@@ -1,0 +1,47 @@
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+
+namespace Lista6.Routing
+{
+    public class CmsRouteTransformer : DynamicRouteValueTransformer
+    {
+        private const string DefaultPageExtension = ".html";
+
+        public override ValueTask<RouteValueDictionary?> TransformAsync(HttpContext httpContext, RouteValueDictionary values)
+        {
+            values.TryGetValue("rest", out var restObj);
+            var rest = restObj as string ?? string.Empty;
+
+            var segments = rest.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (segments.Length == 0)
+            {
+                var r0 = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName = string.Empty, pageName = "index.html", path = rest });
+                return new ValueTask<RouteValueDictionary?>(r0);
+            }
+
+            var last = segments.Last();
+
+            if (last.IndexOf(DefaultPageExtension, StringComparison.InvariantCultureIgnoreCase) >= 0)
+            {
+                var siteName = string.Join("/", segments.Take(segments.Length - 1));
+                var pageName = last; // keep extension
+                var r = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName, pageName, path = rest });
+                return new ValueTask<RouteValueDictionary?>(r);
+            }
+            else if (!last.Contains('.'))
+            {
+                var siteName = string.Join("/", segments);
+                var pageName = "index.html";
+                var r = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName, pageName, path = rest });
+                return new ValueTask<RouteValueDictionary?>(r);
+            }
+
+            // No match
+            return new ValueTask<RouteValueDictionary?>((RouteValueDictionary?)null);
+        }
+    }
+}

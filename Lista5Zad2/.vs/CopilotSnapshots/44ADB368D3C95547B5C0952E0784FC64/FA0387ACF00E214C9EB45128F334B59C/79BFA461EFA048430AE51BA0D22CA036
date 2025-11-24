@@ -1,0 +1,45 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Lista5Zad2.Models;
+
+namespace Lista5Zad2.Controllers
+{
+    public class StudentController : Controller
+    {
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var model = new StudentTasks
+            {
+                Points = new int[10]
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Index(StudentTasks model)
+        {
+            if (model.Points == null || model.Points.Length != 10)
+            {
+                ModelState.AddModelError("Points", "Wprowadź punkty dla 10 zadań.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            return RedirectToAction("Summary", model);
+        }
+
+        [HttpGet]
+        public IActionResult Summary(StudentTasks model)
+        {
+            if (model == null || model.Points == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+        }
+    }
+}

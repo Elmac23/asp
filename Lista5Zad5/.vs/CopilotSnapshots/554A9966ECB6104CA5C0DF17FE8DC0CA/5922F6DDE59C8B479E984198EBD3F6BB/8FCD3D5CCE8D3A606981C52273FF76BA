@@ -1,0 +1,70 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.WebUtilities;
+using System;
+
+namespace Lista5Zad5
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            // Read connection string from configuration.
+            var rawConn = builder.Configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
+
+            // If connection is provided as a URL (postgres://user:pass@host:port/db?schema=...), convert to Npgsql key/value format.
+            if (rawConn.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) ||
+                rawConn.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
+            {
+                var uri = new Uri(rawConn);
+                var userInfo = uri.UserInfo.Split(new[] { ':' }, 2);
+                var username = Uri.UnescapeDataString(userInfo[0]);
+                var password = userInfo.Length > 1 ? Uri.UnescapeDataString(userInfo[1]) : string.Empty;
+                var host = uri.Host;
+                var port = uri.IsDefaultPort ? 5432 : uri.Port;
+                var database = uri.AbsolutePath?.TrimStart('/') ?? string.Empty;
+
+                var cs = $"Host={host};Port={port};Database={database};Username={username};Password={password}";
+
+                var query = QueryHelpers.ParseQuery(uri.Query);
+                if (query.TryGetValue("schema", out var schema))
+                {
+                    cs += $";Search Path={schema}";
+                }
+
+                rawConn = cs;
+            }
+
+            // Add EF Core DbContext using connection string from configuration (PostgreSQL).
+            builder.Services.AddDbContext<Lista5Zad5.Data.ApplicationDbContext>(options =>
+                options.UseNpgsql(rawConn));
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.Run();
+        }
+    }
+}

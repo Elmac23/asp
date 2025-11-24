@@ -1,0 +1,19 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Lista5Zad2.Models
+{
+    public class StudentTasks
+    {
+        [Required]
+        [Display(Name = "Imię")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Nazwisko")]
+        public string LastName { get; set; }
+
+        [Required]
+        [Range(0, 100, ErrorMessage = "Punkty muszą być między {1} i {2}.")]
+        public int[] Points { get; set; }
+    }
+}

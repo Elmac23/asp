@@ -1,0 +1,56 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Lista5Zad2.Models;
+using System.Text.Json;
+
+namespace Lista5Zad2.Controllers
+{
+    public class StudentController : Controller
+    {
+        private const string TempDataKey = "StudentModel";
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var model = new StudentTasks
+            {
+                Points = new int[10]
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Index(StudentTasks model)
+        {
+            if (model.Points == null || model.Points.Length != 10)
+            {
+                ModelState.AddModelError("Points", "Wprowadź punkty dla 10 zadań.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Store serialized model in TempData and redirect (Post-Redirect-Get)
+            TempData[TempDataKey] = JsonSerializer.Serialize(model);
+            return RedirectToAction("Summary");
+        }
+
+        [HttpGet]
+        public IActionResult Summary()
+        {
+            // Try to read model from TempData (set during POST)
+            if (TempData.TryGetValue(TempDataKey, out var serialized) && serialized is string json)
+            {
+                var model = JsonSerializer.Deserialize<StudentTasks>(json);
+                if (model != null && model.Points != null)
+                {
+                    return View(model);
+                }
+            }
+
+            // If no TempData, redirect back to form
+            return RedirectToAction("Index");
+        }
+    }
+}

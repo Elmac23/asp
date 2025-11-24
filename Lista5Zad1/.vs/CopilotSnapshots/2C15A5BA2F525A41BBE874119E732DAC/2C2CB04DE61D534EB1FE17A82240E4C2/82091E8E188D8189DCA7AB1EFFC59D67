@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Lista5Zad1.Models;
+
+namespace Lista5Zad1.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        // New: show form to input 10 task scores
+        [HttpGet]
+        public ActionResult TaskScores()
+        {
+            var model = new TaskScoresViewModel
+            {
+                Scores = new int[10]
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult TaskScores(TaskScoresViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // For demonstration: compute total and average
+                int total = model.Scores.Sum();
+                double avg = model.Scores.Average();
+                ViewBag.Message = $"Total: {total}, Average: {avg:F2}";
+                return View(model);
+            }
+
+            // If we got this far, something failed; redisplay form
+            return View(model);
+        }
+    }
+}

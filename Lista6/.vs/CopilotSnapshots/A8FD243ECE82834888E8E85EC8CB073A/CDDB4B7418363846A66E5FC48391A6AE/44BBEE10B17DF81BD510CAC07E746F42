@@ -1,0 +1,16 @@
+﻿@{
+    Layout = ViewData["Layout"] as string ?? "_Layout";
+}
+<h2>CMS Page</h2>
+<p>Requested path: @ViewData["CmsPath"]</p>
+
+@if (true)
+{
+    <div class="alert alert-info">To jest prosty blok if(true) — zawsze widoczny.</div>
+}
+
+@section Extra {
+    <p>This is an extra optional section from the CMS view.</p>
+}
+
+@await Html.PartialAsync("_CmsPartial")

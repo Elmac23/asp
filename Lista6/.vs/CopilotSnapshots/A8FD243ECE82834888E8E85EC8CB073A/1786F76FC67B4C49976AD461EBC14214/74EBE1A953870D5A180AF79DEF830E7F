@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Alt Layout - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <header><h1>Alternate Layout</h1></header>
+        @RenderBody()
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

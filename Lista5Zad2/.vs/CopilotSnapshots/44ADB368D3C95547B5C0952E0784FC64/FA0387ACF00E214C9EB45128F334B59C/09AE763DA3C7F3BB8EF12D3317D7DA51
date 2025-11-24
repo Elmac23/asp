@@ -1,0 +1,38 @@
+﻿@model Lista5Zad2.Models.StudentTasks
+
+@{
+    ViewData["Title"] = "Formularz zadań";
+}
+
+<h2>Formularz zadań</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+
+    <h3>Punkty za 10 zadań</h3>
+    <div>
+        @for (int i = 0; i < 10; i++)
+        {
+            <div>
+                <label>Punktów za zadanie @(@i + 1)</label>
+                <input type="number" name="Points[@i]" value="@(Model.Points != null && Model.Points.Length > i ? Model.Points[i].ToString() : "")" />
+                <span asp-validation-for="Points"></span>
+            </div>
+        }
+    </div>
+
+    <button type="submit">Wyślij</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

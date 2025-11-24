@@ -1,0 +1,54 @@
+namespace Lista6
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            // simple middleware to handle /cms/... and rewrite path to Cms/Page
+            app.Use(async (context, next) =>
+            {
+                var path = context.Request.Path.Value ?? string.Empty;
+                if (path.StartsWith("/cms", System.StringComparison.OrdinalIgnoreCase))
+                {
+                    // map to /Cms/Page and pass remainder in query
+                    var rest = path.Length > 4 ? path.Substring(5) : string.Empty; // strip leading /cms/
+                    context.Request.Path = "/Cms/Page";
+                    var qs = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(context.Request.QueryString.Value ?? string.Empty);
+                    var qb = new System.Collections.Generic.Dictionary<string, Microsoft.Extensions.Primitives.StringValues>(qs, System.StringComparer.OrdinalIgnoreCase);
+                    qb["path"] = rest;
+                    var newQs = Microsoft.AspNetCore.WebUtilities.QueryHelpers.AddQueryString(string.Empty, qb.ToDictionary(k => k.Key, v => v.Value.ToString()));
+                    context.Request.QueryString = new Microsoft.AspNetCore.Http.QueryString(newQs);
+                }
+
+                await next();
+            });
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.Run();
+        }
+    }
+}

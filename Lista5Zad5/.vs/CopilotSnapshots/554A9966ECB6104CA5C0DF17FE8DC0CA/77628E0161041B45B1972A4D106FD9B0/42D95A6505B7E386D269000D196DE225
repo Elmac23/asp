@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Database=Lista5Zad5;Username=postgres;Password=yourpassword"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

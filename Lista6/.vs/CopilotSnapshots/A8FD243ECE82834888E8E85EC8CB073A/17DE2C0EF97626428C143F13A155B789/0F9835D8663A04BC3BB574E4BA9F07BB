@@ -1,0 +1,73 @@
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Routing.Patterns;
+using Microsoft.AspNetCore.Routing.Template;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.AspNetCore.Routing.EndpointConstraints;
+using Microsoft.AspNetCore.Routing.Template;
+using Microsoft.AspNetCore.Routing.Transforms;
+using Microsoft.AspNetCore.Routing.Tree;
+using Microsoft.AspNetCore.Routing.Infrastructure;
+using Microsoft.AspNetCore.Routing.Mutable;
+using Microsoft.AspNetCore.Routing.Matchers;
+using Microsoft.AspNetCore.Routing.Template.Matchers;
+using Microsoft.AspNetCore.Routing.Routing;
+using Microsoft.AspNetCore.Routing.Patterns;
+using Microsoft.AspNetCore.Routing.Dynamic;
+
+namespace Lista6.Routing
+{
+    using Microsoft.AspNetCore.Routing;
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Routing;
+    using Microsoft.AspNetCore.Routing.Template;
+    using Microsoft.AspNetCore.Routing.Patterns;
+    using Microsoft.AspNetCore.Routing.Dynamic;
+
+    public class CmsRouteTransformer : DynamicRouteValueTransformer
+    {
+        private const string DefaultPageExtension = ".html";
+
+        public override ValueTask<RouteValueDictionary?> TransformAsync(HttpContext httpContext, RouteValueDictionary values)
+        {
+            // Expect value with key "rest" from pattern cms/{**rest}
+            values.TryGetValue("rest", out var restObj);
+            var rest = restObj as string ?? string.Empty;
+
+            // split segments
+            var segments = rest.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+            if (segments.Length == 0)
+            {
+                // cms/ -> site empty, page index
+                var r0 = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName = string.Empty, pageName = "index.html" });
+                return new ValueTask<RouteValueDictionary?>(r0);
+            }
+
+            var last = segments.Last();
+            if (last.IndexOf(DefaultPageExtension, StringComparison.InvariantCultureIgnoreCase) > 0)
+            {
+                var siteName = string.Join("/", segments.Take(segments.Length - 1));
+                var pageName = last.Substring(0, last.LastIndexOf('.')) + DefaultPageExtension; // keep extension
+                var r = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName = siteName, pageName = pageName, path = rest });
+                return new ValueTask<RouteValueDictionary?>(r);
+            }
+            else if (last.IndexOf('.') < 0)
+            {
+                // no extension => treat as folder, pageName = index.html
+                var siteName = string.Join("/", segments);
+                var pageName = "index.html";
+                var r = new RouteValueDictionary(new { controller = "Cms", action = "Page", siteName = siteName, pageName = pageName, path = rest });
+                return new ValueTask<RouteValueDictionary?>(r);
+            }
+
+            // invalid -> do not match
+            return new ValueTask<RouteValueDictionary?>((RouteValueDictionary?)null);
+        }
+    }
+}

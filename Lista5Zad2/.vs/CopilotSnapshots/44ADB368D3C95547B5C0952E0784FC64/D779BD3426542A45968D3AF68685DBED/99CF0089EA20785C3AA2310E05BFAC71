@@ -1,0 +1,41 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using System.Xml.Linq;
+
+namespace Lista5Zad2.Controllers
+{
+    public class FileController : Controller
+    {
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upload(Microsoft.AspNetCore.Http.IFormFile file)
+        {
+            if (file == null)
+            {
+                ModelState.AddModelError("file", "Wybierz plik do przesłania.");
+                return View("Index");
+            }
+
+            var name = file.FileName ?? string.Empty;
+            var size = file.Length;
+
+            var doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                new XElement("file",
+                    new XElement("name", name),
+                    new XElement("size", size)
+                ));
+
+            var xmlString = doc.ToString();
+            var xmlBytes = Encoding.UTF8.GetBytes(xmlString);
+
+            // Return XML file using MVC infrastructure
+            return File(xmlBytes, "application/xml", "fileInfo.xml");
+        }
+    }
+}

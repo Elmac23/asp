@@ -1,0 +1,80 @@
+@model Lista5Zad2.Models.HelpersDemo
+
+@{
+    ViewData["Title"] = "Przyk³ady Html Helpers";
+}
+
+<h2>Przyk³ady Html Helpers</h2>
+
+<p class="text-muted">Krótki przyk³ad u¿ycia typowych helperów HTML w MVC. Poni¿ej krótkie komentarze objaœniaj¹ce.</p>
+
+@using (Html.BeginForm("Index", "Helpers", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        @* Html.ActionLink generuje link do akcji/route *@
+        <label class="form-label">Html.ActionLink</label>
+        <div>@Html.ActionLink("PrzejdŸ do strony g³ównej", "Index", "Home")</div>
+        <small class="text-muted">Generuje &lt;a href="..."&gt;link&lt;/a&gt; do akcji kontrolera.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.CheckBoxFor *@
+        <label class="form-label">Html.CheckBoxFor</label>
+        <div>@Html.CheckBoxFor(m => m.AcceptTerms)</div>
+        <small class="text-muted">Generuje checkbox powi¹zany z w³aœciwoœci¹ modelu.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.DropDownListFor *@
+        <label class="form-label">Html.DropDownListFor</label>
+        <div>@Html.DropDownListFor(m => m.SelectedOption, new SelectList(Model.Options, "Value", "Text"), "Wybierz...")</div>
+        <small class="text-muted">Generuje select z opcjami; powi¹zanie z w³aœciwoœci¹ modelu.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.PasswordFor *@
+        <label class="form-label">Html.PasswordFor</label>
+        <div>@Html.PasswordFor(m => m.Password, new { @class = "form-control" })</div>
+        <small class="text-muted">Generuje pole typu password; wartoœci nie wyœwietla.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.RadioButtonFor *@
+        <label class="form-label">Html.RadioButtonFor</label>
+        <div>
+            @Html.RadioButtonFor(m => m.RadioChoice, "Option1") Option1<br />
+            @Html.RadioButtonFor(m => m.RadioChoice, "Option2") Option2
+        </div>
+        <small class="text-muted">Generuje input radio powi¹zane z w³aœciwoœci¹.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.TextBoxFor *@
+        <label class="form-label">Html.TextBoxFor</label>
+        <div>@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })</div>
+        <small class="text-muted">Generuje zwyk³e pole tekstowe.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.TextAreaFor *@
+        <label class="form-label">Html.TextAreaFor</label>
+        <div>@Html.TextAreaFor(m => m.Description, 5, 50, new { @class = "form-control" })</div>
+        <small class="text-muted">Generuje pole tekstowe wieloliniowe.</small>
+    </div>
+
+    <div class="mb-3">
+        @* Html.Raw pokazuje surowy HTML, nie jest enkodowany - u¿ywaj ostro¿nie *@
+        <label class="form-label">Html.Raw</label>
+        <div>@Html.Raw(Model.RawHtml)</div>
+        <small class="text-muted">Wstawia niebezpieczny/nieenkodowany HTML. U¿ywaj tylko z zaufanymi danymi.</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Wyœlij</button>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success mt-3">@ViewBag.Message</div>
+}

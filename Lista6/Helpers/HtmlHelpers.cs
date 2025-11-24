@@ -1,0 +1,83 @@
+using System;
+using System.Linq.Expressions;
+using System.Reflection;
+using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace Lista6.Helpers
+{
+    public static class HtmlHelpers
+    {
+        private static string GetAttemptedValue(IHtmlHelper html, string name)
+        {
+            if (html.ViewData.ModelState.TryGetValue(name, out var entry) && entry.RawValue != null)
+            {
+                var attempted = entry.AttemptedValue;
+                if (!string.IsNullOrEmpty(attempted)) return attempted;
+            }
+
+            var model = html.ViewData?.Model;
+            if (model != null)
+            {
+                var prop = model.GetType().GetProperty(name, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (prop != null)
+                {
+                    var val = prop.GetValue(model);
+                    return val?.ToString() ?? string.Empty;
+                }
+            }
+
+            return string.Empty;
+        }
+
+        private static bool HasError(IHtmlHelper html, string name)
+        {
+            if (html.ViewData.ModelState.TryGetValue(name, out var entry))
+            {
+                return entry.Errors != null && entry.Errors.Count > 0;
+            }
+            return false;
+        }
+
+        public static IHtmlContent Login(this IHtmlHelper html, string userNameField, string passwordField)
+        {
+            var userVal = GetAttemptedValue(html, userNameField);
+            var passVal = GetAttemptedValue(html, passwordField);
+            var userClass = HasError(html, userNameField) ? "input-validation-error" : string.Empty;
+            var passClass = HasError(html, passwordField) ? "input-validation-error" : string.Empty;
+
+            var htmlString = $"<input type=\"text\" name=\"{userNameField}\" value=\"{System.Net.WebUtility.HtmlEncode(userVal)}\" class=\"{userClass}\" />" +
+                             $"<input type=\"text\" name=\"{passwordField}\" value=\"{System.Net.WebUtility.HtmlEncode(passVal)}\" class=\"{passClass}\" />";
+
+            return new HtmlString(htmlString);
+        }
+
+        public static IHtmlContent LoginFor<TModel, TProperty1, TProperty2>(this IHtmlHelper<TModel> html, Expression<Func<TModel, TProperty1>> expr1, Expression<Func<TModel, TProperty2>> expr2)
+        {
+            string name1 = GetNameFromExpression(expr1);
+            string name2 = GetNameFromExpression(expr2);
+            return ((IHtmlHelper)html).Login(name1, name2);
+        }
+
+        private static string GetNameFromExpression(LambdaExpression expression)
+        {
+            MemberExpression memberExpr = null;
+            if (expression.Body is UnaryExpression unary && unary.Operand is MemberExpression)
+            {
+                memberExpr = (MemberExpression)unary.Operand;
+            }
+            else if (expression.Body is MemberExpression m)
+            {
+                memberExpr = m;
+            }
+
+            if (memberExpr == null)
+            {
+                throw new InvalidOperationException("Expression must be a member expression");
+            }
+
+            return memberExpr.Member.Name;
+        }
+    }
+}

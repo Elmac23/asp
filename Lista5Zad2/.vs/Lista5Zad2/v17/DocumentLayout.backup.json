@@ -1,0 +1,292 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\views\\helpers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:views\\helpers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\models\\helpersdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:models\\helpersdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\controllers\\helperscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:controllers\\helperscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\views\\file\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:views\\file\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\student.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\student.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\summary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\summary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\pages\\summary.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:pages\\summary.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista5zad2\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E06540C3-816E-4E9B-A26E-2CED77512E00}|Lista5Zad2.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\Helpers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Helpers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\Helpers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Helpers\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:46:47.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelpersController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Controllers\\HelpersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HelpersController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Controllers\\HelpersController.cs",
+              "RelativeToolTip": "Controllers\\HelpersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:46:31.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HelpersDemo.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Models\\HelpersDemo.cs",
+              "RelativeDocumentMoniker": "Models\\HelpersDemo.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Models\\HelpersDemo.cs",
+              "RelativeToolTip": "Models\\HelpersDemo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:46:26.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Student.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Student.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Student.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Student.cshtml",
+              "RelativeToolTip": "Pages\\Student.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:26:02.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:21:01.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:21:00.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAjwDsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:11:42.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\File\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\File\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\File\\Index.cshtml",
+              "RelativeToolTip": "Views\\File\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:30:22.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:34:29.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:33:59.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Student.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Student.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Student.cshtml.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Student.cshtml.cs",
+              "RelativeToolTip": "Pages\\Student.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:26:08.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Summary.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Summary.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Summary.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Summary.cshtml",
+              "RelativeToolTip": "Pages\\Summary.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:26:15.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T21:43:35.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Summary.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Summary.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Summary.cshtml.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Pages\\Summary.cshtml.cs",
+              "RelativeToolTip": "Pages\\Summary.cshtml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAABRwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:26:21.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Controllers\\FileController.cs",
+              "RelativeToolTip": "Controllers\\FileController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAABRwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:30:19.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista5Zad2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T21:09:52.255Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

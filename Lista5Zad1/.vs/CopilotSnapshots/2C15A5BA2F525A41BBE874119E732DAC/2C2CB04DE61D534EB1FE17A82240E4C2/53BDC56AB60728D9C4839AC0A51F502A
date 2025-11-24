@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace Lista5Zad1.Models
+{
+    public class TaskScoresViewModel : IValidatableObject
+    {
+        // Bind an array of 10 integer scores
+        [Required]
+        public int[] Scores { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (Scores == null)
+            {
+                yield return new ValidationResult("Scores are required.", new[] { "Scores" });
+                yield break;
+            }
+
+            if (Scores.Length != 10)
+            {
+                yield return new ValidationResult("Exactly 10 scores are required.", new[] { "Scores" });
+            }
+
+            for (int i = 0; i < Scores.Length; i++)
+            {
+                int val = Scores[i];
+                if (val < 0 || val > 100)
+                {
+                    yield return new ValidationResult($"Score for task {i + 1} must be between 0 and 100.", new[] { $"Scores[{i}]" });
+                }
+            }
+        }
+    }
+}
