@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "deMT34WEzkA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sakus\\Desktop\\Neo4jApp\\Neo4jApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sakus\\.nuget\\packages\\neo4j.driver\\5.28.3\\neo4j.driver.5.28.3.nupkg.sha512",
+    "C:\\Users\\sakus\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

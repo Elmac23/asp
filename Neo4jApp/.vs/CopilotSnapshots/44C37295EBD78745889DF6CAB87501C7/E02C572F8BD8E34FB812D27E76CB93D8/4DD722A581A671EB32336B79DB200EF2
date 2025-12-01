@@ -1,0 +1,444 @@
+﻿using Neo4j.Driver;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+class Person
+{
+    public string Name { get; set; } = string.Empty;
+    public int? Born { get; set; }
+}
+
+class Movie
+{
+    public string Title { get; set; } = string.Empty;
+    public int? Released { get; set; }
+    public long? Budget { get; set; }
+    public string? Genre { get; set; }
+}
+
+class Friendship
+{
+    public string From { get; set; } = string.Empty;
+    public string To { get; set; } = string.Empty;
+    public int? Since { get; set; }
+}
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        const string dbUri = "neo4j+s://a5b75dc8.databases.neo4j.io";
+        const string dbUser = "neo4j";
+        const string dbPassword = "77S3LM8Ly4CPF7lYjYu-nLx_6Ad40v0FHUiHXXnA_sY";
+
+        await using var driver = GraphDatabase.Driver(dbUri, AuthTokens.Basic(dbUser, dbPassword));
+
+        try
+        {
+            await driver.VerifyConnectivityAsync();
+            Console.WriteLine("Connected to Neo4j.");
+
+            await using var session = driver.AsyncSession(o => o.WithDatabase("neo4j"));
+
+            while (true)
+            {
+                PrintMenu();
+                var choice = Console.ReadLine()?.Trim();
+                if (string.IsNullOrEmpty(choice)) continue;
+
+                switch (choice)
+                {
+                    case "1": // Create person
+                        await CreatePersonCli(session);
+                        break;
+                    case "2": // Read all persons
+                        await ListPersonsCli(session);
+                        break;
+                    case "3": // Update person
+                        await UpdatePersonCli(session);
+                        break;
+                    case "4": // Delete person
+                        await DeletePersonCli(session);
+                        break;
+                    case "5": // Create friendship
+                        await CreateFriendshipCli(session);
+                        break;
+                    case "6": // List friendships
+                        await ListFriendshipsCli(session);
+                        break;
+                    case "7": // Delete friendship
+                        await DeleteFriendshipCli(session);
+                        break;
+                    case "8": // Initialize sample dataset (tasks provided)
+                        await InitializeSampleDataCli(session);
+                        break;
+                    case "9": // List movies
+                        await ListMoviesCli(session);
+                        break;
+                    case "10": // List actors with roles
+                        await ListActorsWithRolesCli(session);
+                        break;
+                    case "0":
+                        Console.WriteLine("Exiting...");
+                        return;
+                    default:
+                        Console.WriteLine("Unknown option.");
+                        break;
+                }
+
+                Console.WriteLine();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    static void PrintMenu()
+    {
+        Console.WriteLine("Choose an option:");
+        Console.WriteLine("1) Create Person");
+        Console.WriteLine("2) List Persons");
+        Console.WriteLine("3) Update Person (born)");
+        Console.WriteLine("4) Delete Person");
+        Console.WriteLine("5) Create Friendship (FRIEND_OF)");
+        Console.WriteLine("6) List Friendships");
+        Console.WriteLine("7) Delete Friendship");
+        Console.WriteLine("8) Initialize sample dataset (Task scripts)");
+        Console.WriteLine("9) List Movies");
+        Console.WriteLine("10) List Actors with Roles");
+        Console.WriteLine("0) Exit");
+        Console.Write("> ");
+    }
+
+    static async Task CreatePersonCli(IAsyncSession session)
+    {
+        Console.Write("Name: ");
+        var name = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(name)) { Console.WriteLine("Name required."); return; }
+
+        Console.Write("Born (year, optional): ");
+        var bornText = Console.ReadLine()?.Trim();
+        int? born = null;
+        if (int.TryParse(bornText, out var b)) born = b;
+
+        var person = new Person { Name = name, Born = born };
+
+        var created = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                "CREATE (p:Person {name:$name, born:$born}) RETURN p.name AS name, p.born AS born",
+                new { name = person.Name, born = person.Born });
+            var rec = await cursor.SingleAsync();
+            return new Person { Name = rec.Get<string>("name"), Born = rec["born"]?.As<int?>() };
+        });
+
+        Console.WriteLine($"Created: {created.Name} ({created.Born?.ToString() ?? "Unknown"})");
+    }
+
+    static async Task ListPersonsCli(IAsyncSession session)
+    {
+        var persons = await session.ExecuteReadAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync("MATCH (p:Person) RETURN p.name AS name, p.born AS born ORDER BY p.name");
+            var records = await cursor.ToListAsync();
+            var list = new List<Person>();
+            foreach (var r in records)
+            {
+                var name = r.Get<string>("name");
+                var born = r["born"]?.As<int?>();
+                list.Add(new Person { Name = name, Born = born });
+            }
+            return list;
+        });
+
+        Console.WriteLine("Persons:");
+        foreach (var p in persons)
+        {
+            Console.WriteLine($"- {p.Name} ({p.Born?.ToString() ?? "Unknown"})");
+        }
+    }
+
+    static async Task UpdatePersonCli(IAsyncSession session)
+    {
+        Console.Write("Name of person to update: ");
+        var name = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(name)) { Console.WriteLine("Name required."); return; }
+
+        Console.Write("New born year (leave empty to clear): ");
+        var bornText = Console.ReadLine()?.Trim();
+        int? born = null;
+        if (int.TryParse(bornText, out var b)) born = b;
+
+        var updated = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                "MATCH (p:Person {name:$name}) SET p.born = $born RETURN p.name AS name, p.born AS born",
+                new { name, born });
+            var recs = await cursor.ToListAsync();
+            if (recs.Count == 0) return null;
+            var r = recs[0];
+            return new Person { Name = r.Get<string>("name"), Born = r["born"]?.As<int?>() };
+        });
+
+        if (updated == null) Console.WriteLine("Person not found.");
+        else Console.WriteLine($"Updated: {updated.Name} ({updated.Born?.ToString() ?? "Unknown"})");
+    }
+
+    static async Task DeletePersonCli(IAsyncSession session)
+    {
+        Console.Write("Name of person to delete: ");
+        var name = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(name)) { Console.WriteLine("Name required."); return; }
+
+        var deleted = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                "MATCH (p:Person {name:$name}) DETACH DELETE p RETURN count(p) AS deleted",
+                new { name });
+            var rec = await cursor.SingleAsync();
+            return rec.Get<long>("deleted");
+        });
+
+        Console.WriteLine(deleted > 0 ? "Person deleted." : "Person not found.");
+    }
+
+    static async Task CreateFriendshipCli(IAsyncSession session)
+    {
+        Console.Write("From (person name): ");
+        var from = Console.ReadLine()?.Trim();
+        Console.Write("To (person name): ");
+        var to = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to)) { Console.WriteLine("Both names required."); return; }
+
+        Console.Write("Since (year, optional): ");
+        var sinceText = Console.ReadLine()?.Trim();
+        int? since = null;
+        if (int.TryParse(sinceText, out var s)) since = s;
+
+        var created = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                @"MATCH (a:Person {name:$from}), (b:Person {name:$to})
+                  CREATE (a)-[r:FRIEND_OF {since:$since}]->(b)
+                  RETURN a.name AS from, b.name AS to, r.since AS since",
+                new { from, to, since });
+            var rec = await cursor.SingleAsync();
+            return new Friendship { From = rec.Get<string>("from"), To = rec.Get<string>("to"), Since = rec["since"]?.As<int?>() };
+        });
+
+        Console.WriteLine($"Created friendship: {created.From} -> {created.To} (since {created.Since?.ToString() ?? "Unknown"})");
+    }
+
+    static async Task ListFriendshipsCli(IAsyncSession session)
+    {
+        var items = await session.ExecuteReadAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync("MATCH (a:Person)-[r:FRIEND_OF]->(b:Person) RETURN a.name AS from, b.name AS to, r.since AS since ORDER BY from, to");
+            var records = await cursor.ToListAsync();
+            var list = new List<Friendship>();
+            foreach (var r in records)
+            {
+                list.Add(new Friendship { From = r.Get<string>("from"), To = r.Get<string>("to"), Since = r["since"]?.As<int?>() });
+            }
+            return list;
+        });
+
+        Console.WriteLine("Friendships:");
+        foreach (var f in items)
+        {
+            Console.WriteLine($"- {f.From} -> {f.To} (since {f.Since?.ToString() ?? "Unknown"})");
+        }
+    }
+
+    static async Task InitializeSampleDataCli(IAsyncSession session)
+    {
+        Console.WriteLine("Initializing sample dataset (this may create duplicate nodes if run multiple times)...");
+
+        await session.ExecuteWriteAsync(async tx =>
+        {
+            // Task 1 dataset
+            var q1 = @"CREATE (charlie:Person:Actor {name: 'Charlie Sheen'}),
+       (martin:Person:Actor {name: 'Martin Sheen'}),
+       (michael:Person:Actor {name: 'Michael Douglas'}),
+       (oliver:Person:Director {name: 'Oliver Stone'}),
+       (rob:Person:Director {name: 'Rob Reiner'}),
+       (wallStreet:Movie {title: 'Wall Street'}),
+       (charlie)-[:ACTED_IN {role: 'Bud Fox'}]->(wallStreet),
+       (martin)-[:ACTED_IN {role: 'Carl Fox'}]->(wallStreet),
+       (michael)-[:ACTED_IN {role: 'Gordon Gekko'}]->(wallStreet),
+       (oliver)-[:DIRECTED]->(wallStreet),
+       (thePresident:Movie {title: 'The American President'}),
+       (martin)-[:ACTED_IN {role: 'A.J. MacInerney'}]->(thePresident),
+       (michael)-[:ACTED_IN {role: 'President Andrew Shepherd'}]->(thePresident),
+       (rob)-[:DIRECTED]->(thePresident)";
+            await tx.RunAsync(q1);
+
+            // Task 2 additional data
+            var q2 = @"CREATE (newActor1:Person:Actor {name: 'Jennifer Lawrence', born: 1990});
+CREATE (newActor2:Person:Actor {name: 'Leonardo DiCaprio', born: 1974});
+CREATE (newMovie1:Movie {title: 'Inception', released: 2010});
+CREATE (newMovie2:Movie {title: 'The Hunger Games', released: 2012});
+
+MATCH (m:Movie {title: 'Inception'})
+SET m.budget = 160000000, m.genre = 'Sci-Fi';
+
+MATCH (a:Person {name: 'Leonardo DiCaprio'})
+MATCH (m:Movie {title: 'Inception'})
+CREATE (a)-[:ACTED_IN {role: 'Dom Cobb'}]->(m);
+
+MATCH (a:Person {name: 'Jennifer Lawrence'})
+MATCH (m:Movie {title: 'The Hunger Games'})
+CREATE (a)-[:ACTED_IN {role: 'Katniss Everdeen'}]->(m);
+
+MATCH (m:Movie {title: 'The Hunger Games'})
+SET m.released = 2013;";
+            // run each statement separately to avoid semicolon issues
+            var parts = q2.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var part in parts)
+            {
+                var trimmed = part.Trim();
+                if (string.IsNullOrEmpty(trimmed)) continue;
+                await tx.RunAsync(trimmed);
+            }
+
+            // Task 3-5 helpers: create lonely actor and example movies
+            var q3 = @"CREATE (lonelyActor:Person:Actor {name: 'Nobody Famous', born: 1990});
+CREATE (titanic:Movie {title: 'Titanic', released: 1997});
+CREATE (revenant:Movie {title: 'The Revenant', released: 2015});
+WITH titanic, revenant
+MATCH (leo:Person {name: 'Leonardo DiCaprio'})
+CREATE (leo)-[:ACTED_IN {role: 'Jack Dawson'}]->(titanic)
+CREATE (leo)-[:ACTED_IN {role: 'Hugh Glass'}]->(revenant)";
+            var parts3 = q3.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var part in parts3)
+            {
+                var trimmed = part.Trim();
+                if (string.IsNullOrEmpty(trimmed)) continue;
+                await tx.RunAsync(trimmed);
+            }
+
+            return true;
+        });
+
+        Console.WriteLine("Sample data initialization finished.");
+    }
+
+    static async Task ListMoviesCli(IAsyncSession session)
+    {
+        var movies = await session.ExecuteReadAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync("MATCH (m:Movie) RETURN m.title AS title, m.released AS released, m.budget AS budget, m.genre AS genre ORDER BY title");
+            var records = await cursor.ToListAsync();
+            var list = new List<Movie>();
+            foreach (var r in records)
+            {
+                list.Add(new Movie
+                {
+                    Title = r.Get<string>("title"),
+                    Released = r["released"]?.As<int?>(),
+                    Budget = r["budget"]?.As<long?>(),
+                    Genre = r["genre"]?.As<string?>()
+                });
+            }
+            return list;
+        });
+
+        Console.WriteLine("Movies:");
+        foreach (var m in movies)
+        {
+            Console.WriteLine($"- {m.Title} (released: {m.Released?.ToString() ?? "Unknown"}, genre: {m.Genre ?? "Unknown"}, budget: {m.Budget?.ToString() ?? "Unknown"})");
+        }
+    }
+
+    static async Task ListActorsWithRolesCli(IAsyncSession session)
+    {
+        var items = await session.ExecuteReadAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync("MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) RETURN p.name AS actor, r.role AS role, m.title AS movie ORDER BY actor, movie");
+            var records = await cursor.ToListAsync();
+            var list = new List<(string Actor, string? Role, string Movie)>();
+            foreach (var r in records)
+            {
+                list.Add((r.Get<string>("actor"), r["role"]?.As<string?>(), r.Get<string>("movie")));
+            }
+            return list;
+        });
+
+        Console.WriteLine("Actors and roles:");
+        foreach (var it in items)
+        {
+            Console.WriteLine($"- {it.Actor} as {it.Role ?? "(unknown)"} in {it.Movie}");
+        }
+    }
+
+    static async Task ListFriendshipsCli(IAsyncSession session)
+    {
+        var items = await session.ExecuteReadAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync("MATCH (a:Person)-[r:FRIEND_OF]->(b:Person) RETURN a.name AS from, b.name AS to, r.since AS since ORDER BY from, to");
+            var records = await cursor.ToListAsync();
+            var list = new List<Friendship>();
+            foreach (var r in records)
+            {
+                list.Add(new Friendship { From = r.Get<string>("from"), To = r.Get<string>("to"), Since = r["since"]?.As<int?>() });
+            }
+            return list;
+        });
+
+        Console.WriteLine("Friendships:");
+        foreach (var f in items)
+        {
+            Console.WriteLine($"- {f.From} -> {f.To} (since {f.Since?.ToString() ?? "Unknown"})");
+        }
+    }
+
+    static async Task CreateFriendshipCli(IAsyncSession session)
+    {
+        Console.Write("From (person name): ");
+        var from = Console.ReadLine()?.Trim();
+        Console.Write("To (person name): ");
+        var to = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to)) { Console.WriteLine("Both names required."); return; }
+
+        Console.Write("Since (year, optional): ");
+        var sinceText = Console.ReadLine()?.Trim();
+        int? since = null;
+        if (int.TryParse(sinceText, out var s)) since = s;
+
+        var created = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                @"MATCH (a:Person {name:$from}), (b:Person {name:$to})
+                  CREATE (a)-[r:FRIEND_OF {since:$since}]->(b)
+                  RETURN a.name AS from, b.name AS to, r.since AS since",
+                new { from, to, since });
+            var rec = await cursor.SingleAsync();
+            return new Friendship { From = rec.Get<string>("from"), To = rec.Get<string>("to"), Since = rec["since"]?.As<int?>() };
+        });
+
+        Console.WriteLine($"Created friendship: {created.From} -> {created.To} (since {created.Since?.ToString() ?? "Unknown"})");
+    }
+
+    static async Task DeleteFriendshipCli(IAsyncSession session)
+    {
+        Console.Write("From (person name): ");
+        var from = Console.ReadLine()?.Trim();
+        Console.Write("To (person name): ");
+        var to = Console.ReadLine()?.Trim();
+        if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to)) { Console.WriteLine("Both names required."); return; }
+
+        var deleted = await session.ExecuteWriteAsync(async tx =>
+        {
+            var cursor = await tx.RunAsync(
+                "MATCH (a:Person {name:$from})-[r:FRIEND_OF]->(b:Person {name:$to}) DELETE r RETURN count(r) AS deleted",
+                new { from, to });
+            var rec = await cursor.SingleAsync();
+            return rec.Get<long>("deleted");
+        });
+
+        Console.WriteLine(deleted > 0 ? "Friendship deleted." : "Friendship not found.");
+    }
+}

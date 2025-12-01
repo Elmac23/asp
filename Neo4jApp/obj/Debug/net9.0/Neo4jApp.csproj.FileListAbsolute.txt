@@ -1,0 +1,17 @@
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4jApp.exe
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4jApp.deps.json
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4jApp.runtimeconfig.json
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4jApp.dll
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4jApp.pdb
+C:\Users\sakus\Desktop\Neo4jApp\bin\Debug\net9.0\Neo4j.Driver.dll
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.csproj.AssemblyReference.cache
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.AssemblyInfoInputs.cache
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.AssemblyInfo.cs
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.csproj.CoreCompileInputs.cache
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.csproj.Up2Date
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.dll
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\refint\Neo4jApp.dll
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.pdb
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\Neo4jApp.genruntimeconfig.cache
+C:\Users\sakus\Desktop\Neo4jApp\obj\Debug\net9.0\ref\Neo4jApp.dll
