@@ -1,0 +1,54 @@
+﻿using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using Lista8.Models;
+
+Console.WriteLine("HttpClient demo - GET and POST to /api/person");
+
+var baseUrl = args.Length > 0 ? args[0] : "https://localhost:7189"; // adjust port
+using var http = new HttpClient { BaseAddress = new Uri(baseUrl) };
+
+// Optional: get JWT token from API auth endpoint (demo credentials)
+async Task<string?> GetJwt()
+{
+    try
+    {
+        var login = new { Username = "apiuser", Password = "apipass" };
+        var res = await http.PostAsJsonAsync("api/auth/login", login);
+        if (!res.IsSuccessStatusCode) return null;
+        var obj = await res.Content.ReadFromJsonAsync<JsonElement>();
+        if (obj.TryGetProperty("token", out var t)) return t.GetString();
+        return null;
+    }
+    catch { return null; }
+}
+
+// Try JWT first
+var token = await GetJwt();
+if (!string.IsNullOrEmpty(token))
+{
+    http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    Console.WriteLine("Using JWT for requests");
+}
+else
+{
+    Console.WriteLine("No JWT; requests may require cookie auth from browser instead");
+}
+
+// GET
+var people = await http.GetFromJsonAsync<List<Person>>("api/person");
+Console.WriteLine("GET /api/person result:");
+if (people != null)
+    foreach (var p in people)
+        Console.WriteLine($"{p.Id}: {p.FirstName} {p.LastName} ({p.Email}) Age:{p.Age}");
+
+// POST
+var newPerson = new Person { FirstName = "Client", LastName = "App", Email = "client@app", Age = 33 };
+var postRes = await http.PostAsJsonAsync("api/person", newPerson);
+Console.WriteLine($"POST status: {postRes.StatusCode}");
+if (postRes.IsSuccessStatusCode)
+{
+    var created = await postRes.Content.ReadFromJsonAsync<Person>();
+    Console.WriteLine($"Created person id: {created?.Id}");
+}
+
+Console.WriteLine("Done");

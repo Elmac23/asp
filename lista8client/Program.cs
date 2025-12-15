@@ -1,0 +1,203 @@
+﻿using System;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace lista8client
+{
+    internal class Program
+    {
+        static async Task<int> Main(string[] args)
+        {
+            // Fixed server address
+            const string baseUrl = "https://localhost:7020/api/persons";
+
+            try
+            {
+                using var http = new HttpClient();
+
+                while (true)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Choose an action:");
+                    Console.WriteLine("  1) List all persons");
+                    Console.WriteLine("  2) Get person by id");
+                    Console.WriteLine("  3) Create new person");
+                    Console.WriteLine("  4) Exit");
+                    Console.Write("Enter choice: ");
+                    var choice = Console.ReadLine()?.Trim();
+
+                    if (choice == "4" || string.Equals(choice, "exit", StringComparison.OrdinalIgnoreCase))
+                        break;
+
+                    switch (choice)
+                    {
+                        case "1":
+                            await ListPersons(http, baseUrl);
+                            break;
+                        case "2":
+                            Console.Write("Enter id: ");
+                            var idText = Console.ReadLine()?.Trim();
+                            if (!int.TryParse(idText, out var id))
+                            {
+                                Console.WriteLine("Invalid id");
+                                break;
+                            }
+                            await GetPerson(http, baseUrl, id);
+                            break;
+                        case "3":
+                            var person = ReadPersonFromConsole();
+                            if (person != null)
+                            {
+                                await PostPerson(http, baseUrl, person);
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("Unknown choice");
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return 1;
+            }
+
+            return 0;
+        }
+
+        static Person ReadPersonFromConsole()
+        {
+            Console.Write("First name: ");
+            var first = Console.ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(first))
+            {
+                Console.WriteLine("First name is required");
+                return null;
+            }
+
+            Console.Write("Last name: ");
+            var last = Console.ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(last))
+            {
+                Console.WriteLine("Last name is required");
+                return null;
+            }
+
+            Console.Write("Age: ");
+            var ageText = Console.ReadLine()?.Trim();
+            if (!int.TryParse(ageText, out var age))
+            {
+                Console.WriteLine("Invalid age");
+                return null;
+            }
+
+            Console.Write("Email: ");
+            var email = Console.ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                Console.WriteLine("Email is required");
+                return null;
+            }
+
+            return new Person
+            {
+                FirstName = first,
+                LastName = last,
+                Age = age,
+                Email = email
+            };
+        }
+
+        static JsonSerializerOptions JsonOptions => new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true };
+
+        static async Task ListPersons(HttpClient http, string baseUrl)
+        {
+            var res = await http.GetAsync(baseUrl);
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                return;
+            }
+            var json = await res.Content.ReadAsStringAsync();
+            try
+            {
+                var list = JsonSerializer.Deserialize<List<Person>>(json, JsonOptions);
+                if (list == null || list.Count == 0)
+                {
+                    Console.WriteLine("No persons returned");
+                    return;
+                }
+                foreach (var p in list)
+                {
+                    Console.WriteLine($"Id: {p.Id}, Name: {p.FirstName} {p.LastName}, Age: {p.Age}, Email: {p.Email}");
+                }
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine("Response not in expected format:");
+                Console.WriteLine(json);
+            }
+        }
+
+        static async Task GetPerson(HttpClient http, string baseUrl, int id)
+        {
+            var res = await http.GetAsync($"{baseUrl}/{id}");
+            if (res.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                Console.WriteLine("Person not found");
+                return;
+            }
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                return;
+            }
+            var json = await res.Content.ReadAsStringAsync();
+            try
+            {
+                var p = JsonSerializer.Deserialize<Person>(json, JsonOptions);
+                if (p == null)
+                {
+                    Console.WriteLine("No person returned");
+                    return;
+                }
+                Console.WriteLine($"Id: {p.Id}, Name: {p.FirstName} {p.LastName}, Age: {p.Age}, Email: {p.Email}");
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine("Response not in expected format:");
+                Console.WriteLine(json);
+            }
+        }
+
+        static async Task PostPerson(HttpClient http, string baseUrl, Person person)
+        {
+            var json = JsonSerializer.Serialize(person, JsonOptions);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var res = await http.PostAsync(baseUrl, content);
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                var body = await res.Content.ReadAsStringAsync();
+                if (!string.IsNullOrWhiteSpace(body)) Console.WriteLine(body);
+                return;
+            }
+            var resp = await res.Content.ReadAsStringAsync();
+            Console.WriteLine("Created: ");
+            Console.WriteLine(resp);
+        }
+
+        class Person
+        {
+            public int Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public int Age { get; set; }
+            public string Email { get; set; }
+        }
+    }
+}

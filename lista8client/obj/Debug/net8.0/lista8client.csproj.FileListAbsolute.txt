@@ -1,0 +1,15 @@
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\bin\Debug\net8.0\lista8client.exe
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\bin\Debug\net8.0\lista8client.deps.json
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\bin\Debug\net8.0\lista8client.runtimeconfig.json
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\bin\Debug\net8.0\lista8client.dll
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\bin\Debug\net8.0\lista8client.pdb
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.AssemblyInfoInputs.cache
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.AssemblyInfo.cs
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.csproj.CoreCompileInputs.cache
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.sourcelink.json
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.dll
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\refint\lista8client.dll
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.pdb
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\lista8client.genruntimeconfig.cache
+C:\Users\sakus\Desktop\studia\semestr 3\asp\lista8client\obj\Debug\net8.0\ref\lista8client.dll

@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\data\\inmemorypersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\data\\inmemorypersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|c:\\users\\sakus\\desktop\\studia\\semestr 3\\asp\\lista8\\lista8\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{845F96B8-FE56-4CC0-85F1-DD7347601D83}|Lista8.csproj|solutionrelative:lista8\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Lista8\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Lista8\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T19:09:39.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lista8\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Lista8\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAIBJwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T19:09:35.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Lista8\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Lista8\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:29.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Lista8\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Lista8\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:23.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Lista8\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Lista8\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:20.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Lista8\\Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Lista8\\Controllers\\PersonController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:14.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InMemoryPersonRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Data\\InMemoryPersonRepository.cs",
+              "RelativeDocumentMoniker": "Lista8\\Data\\InMemoryPersonRepository.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Data\\InMemoryPersonRepository.cs",
+              "RelativeToolTip": "Lista8\\Data\\InMemoryPersonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:10.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Lista8\\Models\\Person.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Lista8\\Models\\Person.cs",
+              "RelativeToolTip": "Lista8\\Models\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:09:05.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sakus\\Desktop\\studia\\semestr 3\\asp\\Lista8\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T19:08:21.622Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Persons API Demo</title>
+</head>
+<body>
+  <h1>Persons API Demo</h1>
+  <button id="btnGet">GET persons</button>
+  <button id="btnPost">POST sample person</button>
+  <pre id="output"></pre>
+
+  <script src="/js/personsClient.js"></script>
+  <script>
+    const out = document.getElementById('output');
+    document.getElementById('btnGet').addEventListener('click', async () => {
+      const persons = await PersonsClient.getPersons();
+      out.textContent = JSON.stringify(persons, null, 2);
+    });
+
+    document.getElementById('btnPost').addEventListener('click', async () => {
+      const sample = { firstName: 'Marek', lastName: 'Nowy', age: 28, email: 'marek.nowy@example.com' };
+      const created = await PersonsClient.createPerson(sample);
+      out.textContent = JSON.stringify(created, null, 2);
+    });
+  </script>
+</body>
+</html>

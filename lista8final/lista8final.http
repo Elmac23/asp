@@ -1,0 +1,6 @@
+@lista8final_HostAddress = http://localhost:5262
+
+GET {{lista8final_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

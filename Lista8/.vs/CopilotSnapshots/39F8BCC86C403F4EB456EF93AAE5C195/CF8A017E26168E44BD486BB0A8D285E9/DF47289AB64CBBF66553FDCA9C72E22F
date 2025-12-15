@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home - Person API demo</h1>
+    <p>If you are not logged in, <a href="/Account/Login">login here</a> using credentials: <strong>user / password</strong>.</p>
+
+    <button id="getBtn">GET people</button>
+    <button id="postBtn">POST new person</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        async function doGet() {
+            try {
+                const res = await fetch('/api/person', { credentials: 'include' });
+                if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+                const data = await res.json();
+                document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            } catch (e) {
+                document.getElementById('output').textContent = 'Error: ' + e;
+            }
+        }
+
+        async function doPost() {
+            try {
+                const person = { firstName: 'Test', lastName: 'User', email: 'test.user@example.com', age: 20 };
+                const res = await fetch('/api/person', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(person)
+                });
+                if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+                const data = await res.json();
+                document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            } catch (e) {
+                document.getElementById('output').textContent = 'Error: ' + e;
+            }
+        }
+
+        document.getElementById('getBtn').addEventListener('click', doGet);
+        document.getElementById('postBtn').addEventListener('click', doPost);
+    </script>
+</body>
+</html>

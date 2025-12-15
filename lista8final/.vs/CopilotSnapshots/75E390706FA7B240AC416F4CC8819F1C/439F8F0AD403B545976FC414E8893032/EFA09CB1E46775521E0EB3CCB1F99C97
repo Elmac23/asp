@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Home</title>
+</head>
+<body>
+  <h1>Home - protected</h1>
+  <p>Authentication methods: cookie (server) or JWT (client-stored).</p>
+  <button id="btnApiCookie">Call Persons API (cookie)</button>
+  <button id="btnApiJwt">Call Persons API (JWT)</button>
+  <button id="btnLogout">Logout (cookie)</button>
+  <pre id="out"></pre>
+
+  <script src="/js/personsClient.js"></script>
+  <script>
+    document.getElementById('btnApiCookie').addEventListener('click', async () => {
+      const res = await fetch('/api/persons', { credentials: 'same-origin' });
+      const out = document.getElementById('out');
+      if (!res.ok) { out.textContent = 'Error: ' + res.status; return; }
+      const data = await res.json();
+      out.textContent = JSON.stringify(data, null, 2);
+    });
+
+    document.getElementById('btnApiJwt').addEventListener('click', async () => {
+      const token = localStorage.getItem('jwt');
+      const out = document.getElementById('out');
+      if (!token) { out.textContent = 'No JWT token stored. Use Login (JWT) first.'; return; }
+      const res = await fetch('/api/persons', { headers: { 'Authorization': 'Bearer ' + token } });
+      if (!res.ok) { out.textContent = 'Error: ' + res.status; return; }
+      const data = await res.json();
+      out.textContent = JSON.stringify(data, null, 2);
+    });
+
+    document.getElementById('btnLogout').addEventListener('click', async () => {
+      // logout cookie server-side
+      await fetch('/Account/Logout', { method: 'POST', credentials: 'same-origin' });
+      // remove jwt
+      localStorage.removeItem('jwt');
+      window.location = '/Account/Login';
+    });
+  </script>
+</body>
+</html>

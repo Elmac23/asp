@@ -36,4 +36,33 @@ export class ProductService {
     product.increaseStock(quantity);
     await this.productRepository.save(product);
   }
+
+  async updateProduct(
+    id: string,
+    name: string,
+    description: string,
+    price: number,
+    stock: number
+  ): Promise<Product> {
+    const existingProduct = await this.productRepository.findById(id);
+    if (!existingProduct) {
+      throw new Error("Product not found");
+    }
+    const updatedProduct = new Product(
+      id,
+      name,
+      description,
+      new Money(price),
+      stock
+    );
+    return this.productRepository.save(updatedProduct);
+  }
+
+  async deleteProduct(id: string): Promise<void> {
+    const product = await this.productRepository.findById(id);
+    if (!product) {
+      throw new Error("Product not found");
+    }
+    await this.productRepository.delete(id);
+  }
 }

@@ -46,4 +46,30 @@ export class CustomerService {
     customer.updateAddress(newAddress);
     await this.customerRepository.save(customer);
   }
+
+  async updateCustomer(
+    id: string,
+    name: string,
+    email: string,
+    street: string,
+    city: string,
+    postalCode: string,
+    country: string
+  ): Promise<Customer> {
+    const existingCustomer = await this.customerRepository.findById(id);
+    if (!existingCustomer) {
+      throw new Error("Customer not found");
+    }
+    const address = new Address(street, city, postalCode, country);
+    const updatedCustomer = new Customer(id, name, email, address);
+    return this.customerRepository.save(updatedCustomer);
+  }
+
+  async deleteCustomer(id: string): Promise<void> {
+    const customer = await this.customerRepository.findById(id);
+    if (!customer) {
+      throw new Error("Customer not found");
+    }
+    await this.customerRepository.delete(id);
+  }
 }

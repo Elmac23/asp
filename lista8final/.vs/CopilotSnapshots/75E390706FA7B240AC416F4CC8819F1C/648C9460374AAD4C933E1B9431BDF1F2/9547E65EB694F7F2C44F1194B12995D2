@@ -1,0 +1,33 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using lista8final.Clients;
+using lista8final.Models;
+
+namespace lista8final.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class TestClientController : ControllerBase
+    {
+        private readonly PersonHttpClientExample _client;
+
+        public TestClientController(PersonHttpClientExample client)
+        {
+            _client = client;
+        }
+
+        [HttpGet("call-get")]
+        public async Task<IActionResult> CallGet()
+        {
+            var list = await _client.GetAllAsync();
+            return Ok(list);
+        }
+
+        [HttpPost("call-post")]
+        public async Task<IActionResult> CallPost([FromBody] Person p)
+        {
+            var created = await _client.CreateAsync(p);
+            if (created == null) return BadRequest();
+            return Created("", created);
+        }
+    }
+}

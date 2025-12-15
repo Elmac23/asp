@@ -1,0 +1,172 @@
+﻿using System;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+namespace lista8client
+{
+    internal class Program
+    {
+        static async Task<int> Main(string[] args)
+        {
+            if (args.Length == 0)
+            {
+                PrintUsage();
+                return 1;
+            }
+
+            // Fixed server address - simplified as requested
+            const string baseUrl = "http://localhost:7020/api/persons";
+
+            var command = args[0].ToLowerInvariant();
+
+            try
+            {
+                using var http = new HttpClient();
+                switch (command)
+                {
+                    case "list":
+                        await ListPersons(http, baseUrl);
+                        break;
+                    case "get":
+                        if (args.Length < 2)
+                        {
+                            Console.WriteLine("Usage: get <id>");
+                            return 1;
+                        }
+                        if (!int.TryParse(args[1], out var id))
+                        {
+                            Console.WriteLine("Invalid id");
+                            return 1;
+                        }
+                        await GetPerson(http, baseUrl, id);
+                        break;
+                    case "post":
+                        if (args.Length < 3)
+                        {
+                            Console.WriteLine("Usage: post <name> <age>");
+                            return 1;
+                        }
+                        var name = args[1];
+                        if (!int.TryParse(args[2], out var age))
+                        {
+                            Console.WriteLine("Invalid age");
+                            return 1;
+                        }
+                        await PostPerson(http, baseUrl, new Person { Name = name, Age = age });
+                        break;
+                    default:
+                        Console.WriteLine($"Unknown command: {command}");
+                        PrintUsage();
+                        return 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return 1;
+            }
+
+            return 0;
+        }
+
+        static void PrintUsage()
+        {
+            Console.WriteLine("Simple HTTP CLI client for /api/persons");
+            Console.WriteLine("Usage:");
+            Console.WriteLine("  list        - GET all persons");
+            Console.WriteLine("  get <id>    - GET person by id");
+            Console.WriteLine("  post <name> <age> - POST new person");
+            Console.WriteLine();
+            Console.WriteLine("Server address is fixed to http://localhost:5000/api/persons");
+        }
+
+        static JsonSerializerOptions JsonOptions => new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true };
+
+        static async Task ListPersons(HttpClient http, string baseUrl)
+        {
+            var res = await http.GetAsync(baseUrl);
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                return;
+            }
+            var json = await res.Content.ReadAsStringAsync();
+            try
+            {
+                var list = JsonSerializer.Deserialize<List<Person>>(json, JsonOptions);
+                if (list == null)
+                {
+                    Console.WriteLine("No persons returned");
+                    return;
+                }
+                foreach (var p in list)
+                {
+                    Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Age: {p.Age}");
+                }
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine("Response not in expected format:");
+                Console.WriteLine(json);
+            }
+        }
+
+        static async Task GetPerson(HttpClient http, string baseUrl, int id)
+        {
+            var res = await http.GetAsync($"{baseUrl}/{id}");
+            if (res.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                Console.WriteLine("Person not found");
+                return;
+            }
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                return;
+            }
+            var json = await res.Content.ReadAsStringAsync();
+            try
+            {
+                var p = JsonSerializer.Deserialize<Person>(json, JsonOptions);
+                if (p == null)
+                {
+                    Console.WriteLine("No person returned");
+                    return;
+                }
+                Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Age: {p.Age}");
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine("Response not in expected format:");
+                Console.WriteLine(json);
+            }
+        }
+
+        static async Task PostPerson(HttpClient http, string baseUrl, Person person)
+        {
+            var json = JsonSerializer.Serialize(person, JsonOptions);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var res = await http.PostAsync(baseUrl, content);
+            if (!res.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Request failed: {(int)res.StatusCode} {res.ReasonPhrase}");
+                var body = await res.Content.ReadAsStringAsync();
+                if (!string.IsNullOrWhiteSpace(body)) Console.WriteLine(body);
+                return;
+            }
+            var resp = await res.Content.ReadAsStringAsync();
+            Console.WriteLine("Created: ");
+            Console.WriteLine(resp);
+        }
+
+        class Person
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
+    }
+}

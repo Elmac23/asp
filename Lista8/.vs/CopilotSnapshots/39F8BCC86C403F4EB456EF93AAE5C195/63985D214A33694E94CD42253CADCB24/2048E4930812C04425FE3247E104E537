@@ -1,0 +1,39 @@
+﻿using Lista8.Data;
+using Lista8.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+namespace Lista8.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme + "," + JwtBearerDefaults.AuthenticationScheme)]
+    public class PersonController : ControllerBase
+    {
+        private readonly InMemoryPersonRepository _repo;
+        public PersonController(InMemoryPersonRepository repo)
+        {
+            _repo = repo;
+        }
+
+        [HttpGet]
+        public IEnumerable<Person> Get() => _repo.GetAll();
+
+        [HttpGet("{id}")]
+        public ActionResult<Person> Get(int id)
+        {
+            var p = _repo.Get(id);
+            if (p == null) return NotFound();
+            return p;
+        }
+
+        [HttpPost]
+        public ActionResult<Person> Post(Person person)
+        {
+            var created = _repo.Add(person);
+            return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
+        }
+    }
+}

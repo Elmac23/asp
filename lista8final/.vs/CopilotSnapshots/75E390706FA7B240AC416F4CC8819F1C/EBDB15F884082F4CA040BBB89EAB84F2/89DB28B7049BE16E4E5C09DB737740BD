@@ -1,0 +1,66 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using lista8final;
+
+namespace lista8final.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AuthController : ControllerBase
+    {
+        private readonly JwtSettings _settings;
+        private readonly ILogger<AuthController> _logger;
+
+        public AuthController(IOptions<JwtSettings> options, ILogger<AuthController> logger)
+        {
+            _settings = options.Value;
+            _logger = logger;
+        }
+
+        [HttpPost("token")]
+        public IActionResult Token([FromBody] LoginRequest? req)
+        {
+            if (req == null)
+                return BadRequest("Request body required");
+
+            if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+                return BadRequest("Username and password required");
+
+            if (string.IsNullOrWhiteSpace(_settings.Key) || string.IsNullOrWhiteSpace(_settings.Issuer) || string.IsNullOrWhiteSpace(_settings.Audience))
+                return StatusCode(500, "JWT not configured on server");
+
+            try
+            {
+                var claims = new[] { new Claim(ClaimTypes.Name, req.Username) };
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_settings.Key));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+                var now = DateTime.UtcNow;
+                var token = new JwtSecurityToken(
+                    issuer: _settings.Issuer,
+                    audience: _settings.Audience,
+                    claims: claims,
+                    notBefore: now,
+                    expires: now.AddMinutes(30),
+                    signingCredentials: creds);
+
+                return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating JWT token");
+                // Return generic error; check logs for details
+                return Problem(detail: "An error occurred while generating token. Check server logs.", statusCode: 500);
+            }
+        }
+    }
+
+    public class LoginRequest
+    {
+        public string? Username { get; set; }
+        public string? Password { get; set; }
+    }
+}

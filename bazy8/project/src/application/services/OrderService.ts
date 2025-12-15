@@ -119,4 +119,12 @@ export class OrderService {
     order.cancel();
     await this.orderRepository.save(order);
   }
+
+  async deleteOrder(orderId: string): Promise<void> {
+    const order = await this.orderRepository.findById(orderId);
+    if (!order) {
+      throw new Error("Order not found");
+    }
+    await this.orderRepository.delete(orderId);
+  }
 }
